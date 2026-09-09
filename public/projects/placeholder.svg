@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Project image placeholder</title>
+  <desc id="desc">Neutral placeholder image for project sections.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2ece3" />
+      <stop offset="100%" stop-color="#d8c5ad" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)" />
+  <g fill="#7b5a3c" opacity="0.8">
+    <rect x="220" y="570" width="260" height="220" rx="12" />
+    <rect x="510" y="490" width="320" height="300" rx="12" />
+    <rect x="860" y="420" width="220" height="370" rx="12" />
+    <rect x="1110" y="520" width="260" height="270" rx="12" />
+  </g>
+  <text x="800" y="890" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#5b3f27">
+    Boppana Srinivas Contractor
+  </text>
+</svg>

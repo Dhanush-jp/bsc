@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 33% 96%;
+  --foreground: 30 8% 10%;
+  --card: 38 28% 94%;
+  --card-foreground: 30 8% 10%;
+  --primary: 25 28% 47%;
+  --primary-foreground: 40 33% 96%;
+  --secondary: 38 24% 88%;
+  --secondary-foreground: 30 8% 12%;
+  --muted: 36 18% 90%;
+  --muted-foreground: 28 8% 42%;
+  --accent: 25 28% 47%;
+  --accent-foreground: 40 33% 96%;
+  --border: 34 14% 82%;
+  --input: 34 14% 82%;
+  --ring: 25 28% 47%;
+
+  --ivory: 40 33% 96%;
+  --cream: 38 28% 91%;
+  --stone: 32 12% 72%;
+  --concrete: 30 8% 58%;
+  --charcoal: 30 6% 18%;
+  --graphite: 30 8% 10%;
+  --warm-black: 30 10% 7%;
+  --bronze: 25 28% 47%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  overflow-x: hidden;
+}
+
+::selection {
+  background: hsl(var(--bronze));
+  color: hsl(var(--ivory));
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12;
+}
+
+.section-shell-wide {
+  @apply mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12;
+}
+
+.eyebrow {
+  @apply text-[0.65rem] font-medium uppercase tracking-[0.28em] text-bronze sm:text-[0.7rem];
+}
+
+.display-headline {
+  @apply font-display text-[clamp(2.5rem,8vw,7rem)] font-medium uppercase leading-[0.92] tracking-[-0.03em];
+}
+
+.editorial-headline {
+  @apply font-editorial text-[clamp(2.25rem,6vw,5.5rem)] font-light leading-[1.05] tracking-[-0.02em];
+}
+
+.grain {
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+.arch-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bronze focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (pointer: fine) {
+  body.has-custom-cursor {
+    cursor: none;
+  }
+
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor input,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor select {
+    cursor: none;
+  }
+}
+
+/* Hardware Acceleration & Low-End Device Smoothness */
+html, body {
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh;
+}
+
